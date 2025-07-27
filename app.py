@@ -2,8 +2,8 @@
 import streamlit as st
 import pandas as pd
 
-# --- AUTHENTICATION SECTION ---
-allowed_emails = st.secrets["auth"]["allowed_emails"]
+# --- AUTHENTICATION SECTION (No secrets.toml) ---
+allowed_emails = ["manoj.spoffice.kri@gmail.com", "admin@example.com"]
 if "user_authenticated" not in st.session_state:
     user_email = st.text_input("Enter your email to access the dashboard")
     if st.button("Login"):
